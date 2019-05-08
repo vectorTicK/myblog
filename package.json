@@ -1,0 +1,34 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "blog node koa",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vectorTicK/myblog.git"
+  },
+  "keywords": [
+    "node",
+    "koa",
+    "blog"
+  ],
+  "author": "tick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vectorTicK/myblog/issues"
+  },
+  "homepage": "https://github.com/vectorTicK/myblog#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.11.0",
+    "koa-views": "^6.2.0",
+    "mongoose": "^5.5.6",
+    "nunjucks": "^3.2.0"
+  }
+}
