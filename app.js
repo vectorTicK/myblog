@@ -1,21 +1,20 @@
 const Koa = require('koa');
 const Router = require('koa-router');
+const staticFiles = require('koa-static');
 const path = require('path');
 const views = require('koa-views');
 const bodyParser = require('koa-bodyparser');
 const mongoose = require('mongoose');
 const session = require('koa-session')
 const flash = require('./middlewares/flash')
-
-
 const port = require("./config/default").port;
 
-
 const app = new Koa();
-const router = new Router();
 
 app.use(bodyParser());
-
+app.use(staticFiles(path.resolve(__dirname,'./public'),{
+    maxage: 30*24*60*60*1000
+}));
 app.use(views(path.join(__dirname, 'views'), {
     map: {
         html: 'nunjucks'

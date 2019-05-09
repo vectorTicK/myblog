@@ -1,0 +1,22 @@
+{% extends 'views/common/layout.html' %}
+
+{% block header %}
+{% include "views/common/header.html" %}
+{% endblock %}
+
+{% block body %}
+{% include "views/common/notification.html" %}
+
+<h1 class="mt-4">{{article.title}}</h1>
+<div class="row justify-content-between mt-3">
+    <div class="col text-muted">{{article.writer}}</div>
+    <div class="col text-right text-muted">{{article.date}}</div>
+</div>
+<p class="lead mt-4">{{article.content}}</p>
+<a class="btn btn-primary" href="#" role="button">edit</a>
+    <a class="btn btn-danger" href="#" role="button">delete</a>
+{% endblock %}
+
+{% block footer %}
+{% include "views/common/footer.html" %}
+{% endblock %}

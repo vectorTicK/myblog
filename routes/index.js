@@ -18,6 +18,7 @@ module.exports = (app) => {
     router.use('/signin', require('./signin'))
     router.use('/signout', require('./signout'))
     router.use('/posts', require('./posts'))
+    router.use('/user',require('./user'))
     // router.use('/comments', require('./comments'))
     app.use(router.routes()).use(router.allowedMethods());
 }
